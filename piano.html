@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Virtual Piano</title>
+	<link rel="stylesheet" href="piano.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<style>
+		/* Created a grid at the top of piano for speakers and buttons */
+		.one {
+			grid-area: speaker1;
+	         }
+        .two {grid-area: power;}
+        .three {grid-area: dis;}
+        .four {grid-area: vol;}
+        .five {grid-area: buttons;}
+        .six {grid-area: speaker2;
+		}
+        .top {
+             display: grid;
+             grid-template-areas:
+             "speaker1 power dis dis vol speaker2"
+             "speaker1 buttons buttons buttons buttons speaker2";
+
+             grid-gap: 0px;
+             background-color: black;
+             width: 1289px;
+			 border-radius: 10px;
+}
+.top > div {
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 10px;
+  color: white;
+}
+
+	</style>
+</head> 
+
+<body> 
+
+	<!-- Header of Web Page  -->
+<div align="center">
+	<h2 class="headingstyle">Virtual Piano</h2>
+</div>
+	
+<div class="mydiv">
+		<div class="top">
+				<div class="one"><img src="Speaker.png" width="125px" height="125px"><br><img src="Speaker.png" width="125px" height="125px"></div>
+				<div class="two">
+					<div><button id="xyz"><i class="fas fa-power-off"></i></button><br>Power</div>
+				</div>
+				<div class="three">
+					<input type="text">
+					<br><br>
+					<button id="start">Start</button>
+					<button id="start">Stop</button>
+				</div>
+				<div class="four">
+					<button id="abc"><i class="fas fa-volume-up"></i></button>
+					<button id="abc"><i class="fas fa-volume-down"></i></button><br>Volume
+				</div>
+				<div class="five">
+					<div class="btnA">
+						<p>Tones</p>
+						<br>
+						<button id="com">1</button>
+						<button id="com">2</button>
+						<button id="com">3</button>
+						<button id="com">4</button><br>
+						<button id="com">5</button>
+						<button id="com">6</button>
+						<button id="com">7</button>
+						<button id="com">8</button><br>
+					</div>
+					<div>
+						<button id="com1">Echo</button>
+						<button id="com1"><b><b>||</b></b><br></button>
+						<button id="com1"><b>Play</b></button>
+						<button id="com1"><b>Change</b></button>
+						
+					</div>
+					<div class="btnB">
+						<button id="com2">Record</button>
+						<button id="com2">MIC</button>
+						<button id="com2">Drum</button>
+						<button id="com2">Guitar</button>
+						<button id="com2">Violin</button>
+						<button id="com2">Trumpet</button>
+
+					</div>
+				</div>
+				<div class="six"><img src="Speaker.png" width="125px" height="125px"><br><img src="Speaker.png" width="125px" height="125px"></div>
+		</div>
+		<!-- Vitual Piano code for Keys -->
+			<div class="piano"> 
+				<div class="leftblack"></div>
+			<div class="key white" data-note="C3" id="common">C3</div> 
+			<div class="key black" data-note="C#3">C#3</div> 
+			<div class="key white" data-note="D3" id="common1">D3</div> 
+			<div class="key black" data-note="D#3">D#3</div> 
+			<div class="key white" data-note="E3" id="common2">E3</div> 
+			<div class="key white" data-note="F3" id="common3">F3</div> 
+			<div class="key black" data-note="F#3">F#3</div> 
+			<div class="key white" data-note="G3" id="common4">G3</div> 
+			<div class="key black" data-note="G#3">G#3</div> 
+			<div class="key white" data-note="A3" id="common5">A3</div> 
+			<div class="key black" data-note="A#3">A#3</div> 
+			<div class="key white" data-note="B3" id="common6">B3</div> 
+
+			<div class="key white" data-note="C4" id="common7">C4</div> 
+			<div class="key black" data-note="C#4" >C#4</div> 
+			<div class="key white" data-note="D4" id="common8">D4</div> 
+			<div class="key black" data-note="D#4" >D#4</div> 
+			<div class="key white" data-note="E4" id="common9">E4</div> 
+			<div class="key white" data-note="F4" id="common10">F4</div> 
+			<div class="key black" data-note="F#4" >F#4</div> 
+			<div class="key white" data-note="G4" id="common11">G4</div> 
+			<div class="key black" data-note="G#4">G#4</div> 
+			<div class="key white" data-note="A4" id="common12">A4</div> 
+			<div class="key black" data-note="A#4">A#4</div> 
+			<div class="key white" data-note="B4" id="common13">B4</div> 
+	
+			<div class="key white" data-note="C5" id="common14">C5</div> 
+			<div class="key black" data-note="C#5">C#5</div> 
+			<div class="key white" data-note="D5" id="common15">D5</div> 
+			<div class="key black" data-note="D#5">D#5</div> 
+			<div class="key white" data-note="E5" id="common16">E5</div> 
+			<div class="key white" data-note="F5" id="common17">F5</div> 
+			<div class="key black" data-note="F#5">F#5</div> 
+			<div class="key white" data-note="G5" id="common18">G5</div> 
+			<div class="key black" data-note="G#5">G#5</div> 
+			<div class="key white" data-note="A5" id="common19">A5</div> 
+			<div class="key black" data-note="A#5">A#5</div> 
+			<div class="key white" data-note="B5" id="common20">B5</div> 
+			
+			<div class="key white" data-note="C6" id="common21">C6</div>
+			<div class="leftblack"></div>
+		</div>
+
+		<!-- button for changing Color  -->
+		<center>
+		<button type="submit" class="button" onclick="changecolor()">Change Key Color</button>
+		</center>
+
+		<!-- Audio for Keys -->
+		<audio src="Audio/Set 1/C3.mp3" id="C3"></audio>
+		<audio src="Audio/Set 1/C#3.mp3" id="C#3"></audio>
+		<audio src="Audio/Set 1/D3.mp3" id="D3"></audio>
+		<audio src="Audio/Set 1/D#3.mp3" id="D#3"></audio>
+		<audio src="Audio/Set 1/E3.mp3" id="E3"></audio>
+		<audio src="Audio/Set 1/F3.mp3" id="F3"></audio>
+		<audio src="Audio/Set 1/F#3.mp3" id="F#3"></audio>
+		<audio src="Audio/Set 1/G3.mp3" id="G3"></audio>
+		<audio src="Audio/Set 1/G#3.mp3" id="G#3"></audio>
+		<audio src="Audio/Set 1/A3.mp3" id="A3"></audio>
+		<audio src="Audio/Set 1/A#3.mp3" id="A#3"></audio>
+		<audio src="Audio/Set 1/B3.mp3" id="B3"></audio>
+
+		<audio src="Audio/Set 2/C4.mp3" id="C4"></audio>
+		<audio src="Audio/Set 2/C#4.mp3" id="C#4"></audio>
+		<audio src="Audio/Set 2/D4.mp3" id="D4"></audio>
+		<audio src="Audio/Set 2/D#4.mp3" id="D#4"></audio>
+		<audio src="Audio/Set 2/E4.mp3" id="E4"></audio>
+		<audio src="Audio/Set 2/F4.mp3" id="F4"></audio>
+		<audio src="Audio/Set 2/F#4.mp3" id="F#4"></audio>
+		<audio src="Audio/Set 2/G4.mp3" id="G4"></audio>
+		<audio src="Audio/Set 2/G#4.mp3" id="G#4"></audio>
+		<audio src="Audio/Set 2/A4.mp3" id="A4"></audio>
+		<audio src="Audio/Set 2/A#4.mp3" id="A#4"></audio>
+		<audio src="Audio/Set 2/B4.mp3" id="B4"></audio>
+
+		<audio src="Audio/Set 3/C5.mp3" id="C5"></audio>
+		<audio src="Audio/Set 3/C#5.mp3" id="C#5"></audio>
+		<audio src="Audio/Set 3/D5.mp3" id="D5"></audio>
+		<audio src="Audio/Set 3/D#5.mp3" id="D#5"></audio>
+		<audio src="Audio/Set 3/E5.mp3" id="E5"></audio>
+		<audio src="Audio/Set 3/F5.mp3" id="F5"></audio>
+		<audio src="Audio/Set 3/F#5.mp3" id="F#5"></audio>
+		<audio src="Audio/Set 3/G5.mp3" id="G5"></audio>
+		<audio src="Audio/Set 3/G#5.mp3" id="G#5"></audio>
+		<audio src="Audio/Set 3/A5.mp3" id="A5"></audio>
+		<audio src="Audio/Set 3/A#5.mp3" id="A#5"></audio>
+		<audio src="Audio/Set 3/B5.mp3" id="B5"></audio>
+
+		<audio src="Audio/C6.mp3" id="C6"></audio>
+        
+	</div>
+
+	<!-- footer of web page using Marquee -->
+<div class="footer">
+	<marquee>Web Development Minor Project </marquee>
+</div>
+</script>
+	</body> 
+</html>
+<script src="piano.js"></script>

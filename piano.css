@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("bg2.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+body .headingstyle {
+  padding: 20px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 24px;
+  color: white;
+  background-color: black;
+  margin: 10px;
+}
+
+body .mydiv {
+  padding: 30px;
+}
+
+body .piano {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+body .key {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+body .white {
+  width: 9%;
+  min-width: 60px;
+  height: 70%;
+  background-color: white;
+  border: 1px solid #ccc;
+  color: #000;
+}
+
+body .black {
+  width: 8%;
+  height: 45%;
+  margin-left: -2%;
+  margin-right: -2%;
+  z-index: 2;
+  background-color: black;
+  border: 3px solid #ccc;
+  color: #fff;
+}
+
+body .white.active {
+  background-color: #ccc;
+}
+
+body .black.active {
+  background-color: #333;
+}
+
+body .leftblack {
+  background-color: black;
+  width: 8%;
+  height: 70%;
+  color: black;
+}
+
+.button {
+  padding: 10px;
+  color: white;
+  background-color: black;
+  border-radius: 30px;
+}
+
+.btnA {
+  float: Left;
+}
+
+.btnA #com {
+  padding: 5px;
+  border-radius: 10px;
+}
+
+#com1 {
+  padding: 10px;
+  color: white;
+  background-color: #37c4c9;
+  border-radius: 10px;
+}
+
+.btnB {
+  float: right;
+}
+
+.btnB #com2 {
+  padding: 10px;
+  border-radius: 100px;
+  color: white;
+  background-color: orange;
+}
+
+#xyz {
+  padding: 10px;
+  background-color: greenyellow;
+  border-radius: 100px;
+}
+
+#abc {
+  padding: 10px;
+  color: white;
+  background-color: hotpink;
+  border-radius: 100px;
+}
+
+#start {
+  padding: 10px;
+  background-color: brown;
+  color: white;
+  border-radius: 100px;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  font-size: 24px;
+  font-family: "Courier New", Courier, monospace;
+  margin: 5px;
+}
+/*# sourceMappingURL=piano.css.map */
